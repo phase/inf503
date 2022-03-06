@@ -437,7 +437,8 @@ int main(int argc, char **argv) {
             if (percentDone > lastPercent) {
                 clock_t soFar = clock() - t;
                 double time_taken = ((double) soFar) / CLOCKS_PER_SEC;
-                cout << "..." << percentDone << "% (" << i << "/" << first->size << ") done in " << time_taken << "s..."
+                cout << "..." << percentDone << "% (" << i << "/" << first->size << ") done in " << time_taken
+                     << "s with " << sharedFragments << " shared fragments..."
                      << endl;
                 lastPercent = floor(percentDone) + 5.0;
             }
